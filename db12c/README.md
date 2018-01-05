@@ -43,7 +43,7 @@ Now it's time to run your own personal container with the database in it. This p
 Change back into the project directory where this README is located.  When you run the container, docker mounts this directory into the container's filesystem at a location where the oracle setup scripts know to look for initialization scripts of type *.sql and *.sh.  Those scripts are run to 1) create the crs schemas and 2) import the crs data into those schemas.  This process is only run once when the container is created.  Stopping/starting the container only starts and stops the database.  The command below starts the container in the foreground.  If you want to run it as a daemon, add `-d -it` to the docker command.
 
 ```
-$ cd .../Atg11Demo/db12c
+$ cd .../Atg11Docker/db12c
 $ docker run --name <an easy to remember container name, e.g. 'crsdb'> \
 -p 1521:1521 -p 5500:5500 \
 -e ORACLE_PWD=<your preferred password here> \
