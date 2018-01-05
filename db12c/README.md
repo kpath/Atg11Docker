@@ -2,6 +2,20 @@
 
 This guide describes how to create a dockerized Oracle Database 12.2.0.1 for use with ATG CRS.
 
+## Minikube
+
+These instructions are the same for running docker inside minikube.  Make sure you've run:
+
+```
+$ eval $(minikube docker-env)
+```
+
+Make sure minikube has enough resources for this huge VM.  You can't change the VM's resources after minikube creates it, so if you've been playing around with minikube, you're going to need to delete it and start over.  Assuming you've got at least 16G of RAM on your developer machine, you should grant 12 gigs on RAM to the VM.  And you should give it plenty of disk:
+
+```
+$ minikube start --disk-size 60g --memory 12288
+```
+
 ## Download Oracle Database 12c Release 2 (12.2.0.1.0) - Standard Edition 2 and Enterprise Edition
 
 - Go to [Oracle Database Software Downloads](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index-092322.html)
